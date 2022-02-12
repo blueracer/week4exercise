@@ -5,12 +5,12 @@ podTemplate(containers: [
         command: 'sleep', 
         args: '30d',
         volumeMounts:
-            - name: maven-repo
-              mountPath: /root/.m2/repository         
+            - name: 'maven-repo'
+              mountPath: '/root/.m2/repository'         
         volumes:
-            - name: maven-repo
+            - name: 'maven-repo'
               persistentVolumeClaim:
-              claimName: jenkins-pv-claim
+              claimName: 'jenkins-pv-claim'
         ),
   ]) {
 
