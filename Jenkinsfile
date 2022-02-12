@@ -3,14 +3,7 @@ podTemplate(containers: [
         name: 'maven', 
         image: 'maven:3.8.1-jdk-8', 
         command: 'sleep', 
-        args: '30d',
-        volumeMounts:
-              name: 'maven-repo'
-              mountPath: '/root/.m2/repository'         
-        volumes:
-              name: 'maven-repo'
-              persistentVolumeClaim:
-              claimName: 'jenkins-pv-claim'
+        args: '30d'
         ),
   ]) {
 
